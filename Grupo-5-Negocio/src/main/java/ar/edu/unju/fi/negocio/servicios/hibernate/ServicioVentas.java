@@ -1,0 +1,9 @@
+package ar.edu.unju.fi.negocio.servicios.hibernate;
+
+public interface ServicioVentas {
+	
+	public void crearPlan();
+	public void pagarCuota();
+	public void mostrarPlanes();
+
+}
