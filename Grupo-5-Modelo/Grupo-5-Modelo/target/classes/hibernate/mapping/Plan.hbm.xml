@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="ar.edu.fi.unju.model.domian.Plan" table="planes" abstract="true">
+        <id name="idPlan" type="long">
+            <column name="id_plan" />
+            <generator class="increment" />
+        </id>
+        <discriminator type="string">
+            <column name="tipo" />
+        </discriminator>
+        
+     	<list name="cuotas" inverse="false" table="cuotas" lazy="true" cascade="all">
+            <key>
+                <column name="id_plan" />
+            </key>
+            <list-index base="1">
+            	<column name="nro_cuota"></column>
+            </list-index>
+            <one-to-many class="ar.edu.fi.unju.model.domian.Cuota" />
+        </list>
+         <many-to-one name="vehiculo" class="ar.edu.fi.unju.model.domian.Vehiculo" fetch="join">
+            <column name="id_vehiculo" />
+        </many-to-one>
+        <many-to-one name="cliente" class="ar.edu.fi.unju.model.domian.Cliente" fetch="join">
+            <column name="id_cliente" />
+        </many-to-one>
+        
+    </class>
+    
+    <subclass name="ar.edu.fi.unju.model.domian.Plan3070" extends="ar.edu.fi.unju.model.domian.Plan" discriminator-value="Plan3070" lazy="false">
+        <property name="montoEntrega" type="double" access="field">
+            <column name="monto_entrega" />
+        </property>
+    </subclass>
+    
+     <subclass name="ar.edu.fi.unju.model.domian.PlanRegular" extends="ar.edu.fi.unju.model.domian.Plan" discriminator-value="PlanRegular" lazy="false">
+    </subclass>
+    
+</hibernate-mapping>

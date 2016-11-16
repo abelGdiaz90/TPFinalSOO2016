@@ -1,0 +1,38 @@
+package ar.edu.unju.fi.model.dao.impl;
+
+import java.util.List;
+
+import org.springframework.transaction.annotation.Transactional;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import ar.edu.fi.unju.model.domian.Vehiculo;
+import ar.edu.unju.fi.modelo.dao.VehiculoDao;
+
+@Repository
+@Transactional
+public class VehiculoDaoImpl extends GenericDaoImpl<Vehiculo, Long> implements VehiculoDao{
+
+	public List<Vehiculo> listarVehiculos() {
+		return listar();
+	}
+
+	public long guardarVehiculo(Vehiculo v) {
+		return guardar(v);
+	}
+
+	public void eliminarVehiculo(Vehiculo v) {
+		eliminar(v);
+	}
+
+	public void actualizarVehiculo(Vehiculo v) {
+		actualizar(v);
+	}
+
+	public Vehiculo buscarVehiculo(long id) {
+		return buscar(id);
+	}
+	
+	
+
+}

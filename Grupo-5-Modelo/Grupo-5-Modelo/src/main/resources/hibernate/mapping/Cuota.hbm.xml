@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping>
+    <class name="ar.edu.fi.unju.model.domian.Cuota" table="cuotas" >
+        <id name="idCuota" type="long">
+            <column name="id_cuota" />
+            <generator class="increment" />
+        </id>
+        <property name="fechaVencimiento" type="java.util.Date">
+            <column name="fecha_vencimiento" />
+        </property>
+        <property name="fechaPagada" type="java.util.Date">
+            <column name="fecha_pagada" />
+        </property>
+        <property name="monto" type="java.lang.Double">
+            <column name="monto" />
+        </property>
+
+    </class>
+</hibernate-mapping>

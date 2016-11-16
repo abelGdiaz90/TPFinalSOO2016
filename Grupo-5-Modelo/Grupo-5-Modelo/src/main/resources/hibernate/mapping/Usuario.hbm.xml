@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 08-oct-2016 2:19:34 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="ar.edu.fi.unju.model.domian.Usuario" table="usuarios">
+        <id name="usuarioId" type="java.lang.Integer">
+            <column name="usuario_id" />
+            <generator class="increment" />
+        </id>
+        <property name="usuario" type="java.lang.String">
+            <column name="usuario" />
+        </property>
+        <property name="apellidoNombre" type="java.lang.String">
+            <column name="apellido_nombre" />
+        </property>
+        <property name="clave" type="java.lang.String">
+            <column name="clave" />
+        </property>
+        <property name="eMail" type="java.lang.String" access="field">
+            <column name="e_mail" />
+        </property>
+        <many-to-one name="rol" class="ar.edu.fi.unju.model.domian.Rol" fetch="join">
+            <column name="rol_id" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
