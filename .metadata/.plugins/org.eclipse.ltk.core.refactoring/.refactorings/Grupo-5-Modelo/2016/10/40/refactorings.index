@@ -1,0 +1,33 @@
+1475641732984	Delete element
+1475641819681	Delete element
+1475642037866	Delete element
+1475643874602	Delete elements
+1475643992544	Delete elements
+1475644144372	Move file
+1475644193048	Delete element
+1475672826406	Encapsulate field 'modelo'
+1475672881596	Encapsulate field 'idPlan'
+1475676819879	Encapsulate field 'idCuota'
+1475676853627	Encapsulate field 'dni'
+1475678196243	Encapsulate field 'idAgencia'
+1475679301420	Move file
+1475804385855	Encapsulate field 'idCliente'
+1475814753694	Delete element
+1475820210209	Move 'Cliente.hbm.xml' to 'mapping'
+1475821464216	Delete element
+1475822788775	Move 'hibernate.cfg.xml' to 'resources'
+1475884580402	Delete element
+1475884664282	Delete element
+1475887334179	Delete element
+1475892922296	Move 'Cuota.hbm.xml' to 'mapping'
+1475892995588	Delete element
+1475893019172	Move 'Plan.hbm.xml' to 'mapping'
+1475895677304	Delete element
+1475898880545	Move 'Plan3070.hbm.xml' to 'mapping'
+1475898882330	Move 'PlanRegular.hbm.xml' to 'mapping'
+1475902732323	Delete elements
+1475902924314	Delete element
+1475903956200	Delete element
+1475903960804	Delete element
+1475904027545	Move 'Rol.hbm.xml' to 'mapping'
+1475904029777	Move 'Usuario.hbm.xml' to 'mapping'

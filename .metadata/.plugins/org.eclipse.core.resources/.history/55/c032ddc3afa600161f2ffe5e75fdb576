@@ -1,0 +1,49 @@
+package BinarioTexto;
+
+import javax.swing.*;
+
+import java.awt.Image;
+import java.awt.Toolkit;
+import java.awt.event.*;
+
+
+@SuppressWarnings("serial")
+public class VentanaGUI extends JFrame implements ActionListener{
+	
+    private JButton boton1;
+	private JLabel label1;
+	private JTextField textfield1;
+    public VentanaGUI() {
+        setLayout(null);
+        label1=new JLabel("Archivo Binario:");
+        label1.setBounds(10,10,100,30);
+        add(label1);
+        textfield1=new JTextField();
+        textfield1.setBounds(120,10,150,20);
+        add(textfield1);
+        boton1=new JButton("Generar Fichero");
+        boton1.setBounds(100,100,150,30);
+        add(boton1);
+        Image icon = Toolkit.getDefaultToolkit().getImage(getClass().getResource("/iconos/binario.png"));
+        setIconImage(icon);
+        boton1.addActionListener(this);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+    
+    public void actionPerformed(ActionEvent e) {
+        if (e.getSource()==boton1) {
+        
+            String direccion = textfield1.getText();
+            
+            Fichero fichero = new Fichero();
+            
+            fichero.generarFicheroTexto(direccion);
+            
+            textfield1.setText(null);
+            
+           
+        }
+    }
+    
+    
+}

@@ -1,0 +1,7 @@
+Numero	Registro Tipo	Version	DTSN	FECHA	Card Issuer ID	CardType	Card Desing Id	Card Serial Number	Card Check Digit	Card Internal Serial Number	Card Version	Definition Type	Service ID
+ 1	34	2	2775	Wed Oct 05 06:36:05 ART 2016	0	0	0	0	0	0	0	1	23 
+ Numero	Registro Tipo	Version	DTSN	FECHA	Card Issuer ID	CardType	Card Desing Id	Card Serial Number	Card Check Digit	Card Internal Serial Number	Card Version	Definition Type	Service ID
+ 2	34	2	2797	Wed Oct 05 06:47:30 ART 2016	0	0	0	0	0	0	0	4	23 
+ Registro Tipo	Version	Fecha	CSN	DPT-ID	AP-MAC
+ 99	1	Wed Oct 05 06:47:30 ART 2016	23	256	0 
+ 

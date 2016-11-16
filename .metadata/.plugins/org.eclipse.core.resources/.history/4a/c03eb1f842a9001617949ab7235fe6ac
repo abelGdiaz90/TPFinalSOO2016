@@ -1,0 +1,64 @@
+package ar.edu.unju.fi.model.dao.impl;
+
+import java.io.Serializable;
+import java.lang.reflect.ParameterizedType;
+import java.util.List;
+
+import org.hibernate.Criteria;
+import org.hibernate.Session;
+import org.hibernate.tuple.entity.EntityMetamodel.GenerationStrategyPair;
+
+import ar.edu.unju.fi.model.hibernate.util.BaseHibernateSpring;
+import ar.edu.unju.fi.modelo.dao.GenericDao;
+
+public class GenericDaoImpl <Entity, K extends Serializable> extends BaseHibernateSpring implements GenericDao<Entity, K> {
+
+	public Class<Entity> domainClass = getDomainClass();
+	
+	
+	protected Class getDomainClass() {
+		   if (domainClass == null) {
+		   ParameterizedType thisType = (ParameterizedType) getClass()
+		     .getGenericSuperclass();
+		   domainClass = (Class) thisType.getActualTypeArguments()[0];
+		   }
+		  return domainClass;
+		 }
+		  
+	public K guardar(Entity t) {
+		K clave;
+
+		clave = (K) getSession().save(t);
+
+		return clave;
+	}
+
+	public void actualizar(Entity t){
+		
+		 	getSession().update(t);
+
+		   } 
+		  
+
+	public Entity buscar(K id) {
+
+		Entity returnValue = (Entity) getSession().get(domainClass, id);
+
+	    return returnValue;
+	}
+
+	public void eliminar(Entity t) {
+
+	 	getSession().delete(t);
+
+		
+	}
+
+	public List<Entity> listar() {
+
+		Criteria criteria = getSession().createCriteria(domainClass);
+		return criteria.list();
+	}
+
+
+}

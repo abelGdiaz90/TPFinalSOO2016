@@ -1,0 +1,46 @@
+package ar.edu.unju.fi.negocio.servicios.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ar.edu.fi.unju.model.domian.Usuario;
+import ar.edu.unju.fi.model.dao.impl.UsuarioDaoImpl;
+import ar.edu.unju.fi.modelo.dao.UsuarioDao;
+import ar.edu.unju.fi.negocio.servicios.ServicioSeguridad;
+
+@Service
+@Transactional
+public class ServicioSeguridadHibernateImpl implements ServicioSeguridad {
+	
+	@Resource
+	private UsuarioDao usuarioDao;
+	
+	public List<Usuario> listaUsuarios() throws Exception {
+		return usuarioDao.listarUsuarios();
+	}
+
+	public Usuario buscarUsuario(Usuario usu) throws Exception {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	public void eliminarUsuario(Usuario usu) throws Exception {
+		usuarioDao.eliminarUsuario(usu);
+		return;
+	}
+
+	public void modificarUsuario(Usuario usu) throws Exception {
+		usuarioDao.actualizarUsuario(usu);
+	}
+
+	public long agregarUsuario(Usuario usu) throws Exception {
+		return usuarioDao.guardarUsuario(usu);
+	}
+
+}

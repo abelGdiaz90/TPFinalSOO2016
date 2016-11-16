@@ -1,0 +1,4 @@
+#Tomcat publish data
+#Wed Nov 16 10:50:12 ART 2016
+org.eclipse.jst.j2ee.server\:Grupo-5-Negocio=WEB-INF/lib/Grupo-5-Negocio-0.0.1-SNAPSHOT.jar
+org.eclipse.jst.j2ee.server\:Grupo-5-Modelo=WEB-INF/lib/Grupo-5-Modelo-0.0.1-SNAPSHOT.jar

@@ -1,0 +1,20 @@
+package BinarioTexto;
+
+import java.util.List;
+
+public class Utilidad {
+	
+	// Funcion de Utilidad
+	public void generarIdEquivalente(int nroDeRegistro){
+	    String s = String.format("%8s", Integer.toBinaryString(nroDeRegistro& 0xFF)).replace(' ', '0');
+        long numero = new Long(Long.parseLong(s,2));
+        byte bait = (byte)Short.parseShort(s, 2);
+        System.out.println(numero+"  =  "+ bait);
+	}
+	// Funcion de Utilidad
+	public void mostrarArray(List<Byte> ficheroByte){
+		for (int i = 0; i < ficheroByte.size(); i++) {
+			System.out.println(ficheroByte.get(i));
+		}
+	}
+}

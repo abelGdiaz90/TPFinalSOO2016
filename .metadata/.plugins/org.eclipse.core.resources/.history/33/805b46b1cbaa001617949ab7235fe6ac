@@ -1,0 +1,32 @@
+package ar.edu.unju.fi.model.dao.impl;
+
+import java.util.List;
+
+import ar.edu.fi.unju.model.domian.Vehiculo;
+import ar.edu.unju.fi.modelo.dao.VehiculoDao;
+
+public class VehiculoDaoImpl extends GenericDaoImpl<Vehiculo, Long> implements VehiculoDao{
+
+	public List<Vehiculo> listarVehiculos() {
+		return listar();
+	}
+
+	public long guardarVehiculo(Vehiculo v) {
+		return guardar(v);
+	}
+
+	public void eliminarVehiculo(Vehiculo v) {
+		eliminar(v);
+	}
+
+	public void actualizarVehiculo(Vehiculo v) {
+		actualizar(v);
+	}
+
+	public Vehiculo buscarVehiculo(long id) {
+		return buscar(id);
+	}
+	
+	
+
+}

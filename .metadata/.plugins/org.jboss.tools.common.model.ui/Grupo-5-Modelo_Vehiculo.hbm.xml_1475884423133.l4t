@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Layout resource="/Grupo-5-Modelo/src/main/resources/hibernate/mapping/Vehiculo.hbm.xml">
+ <TreeFormPage>
+  <Memento type="">
+   <Memento collapsed="false" type="Properties Editor"/>
+  </Memento>
+ </TreeFormPage>
+</Layout>

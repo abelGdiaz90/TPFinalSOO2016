@@ -1,0 +1,60 @@
+package ar.edu.unju.fi.negocio.servicios.impl;
+
+import java.util.List;
+
+import javax.annotation.Resource;
+import javax.inject.Inject;
+import javax.inject.Named;
+
+import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
+
+import ar.edu.fi.unju.model.domian.Usuario;
+import ar.edu.unju.fi.model.dao.impl.UsuarioDaoImpl;
+import ar.edu.unju.fi.modelo.dao.UsuarioDao;
+import ar.edu.unju.fi.negocio.servicios.ServicioSeguridad;
+
+@Service
+@Transactional
+public class ServicioSeguridadHibernateImpl implements ServicioSeguridad {
+	
+	@Resource
+	private UsuarioDao usuarioDao;
+	
+	/* (non-Javadoc)
+	 * @see ar.edu.unju.fi.negocio.servicios.impl.ServicioSeguridad#listaUsuarios()
+	 */
+	public List<Usuario> listaUsuarios() throws Exception {
+		return usuarioDao.listarUsuarios();
+	}
+
+	/* (non-Javadoc)
+	 * @see ar.edu.unju.fi.negocio.servicios.impl.ServicioSeguridad#buscarUsuario(int)
+	 */
+	public Usuario buscarUsuario(int id) throws Exception {
+		return usuarioDao.buscarUsuario(id);
+	}
+
+	/* (non-Javadoc)
+	 * @see ar.edu.unju.fi.negocio.servicios.impl.ServicioSeguridad#eliminarUsuario(ar.edu.fi.unju.model.domian.Usuario)
+	 */
+	public void eliminarUsuario(Usuario usu) throws Exception {
+		usuarioDao.eliminarUsuario(usu);
+		return;
+	}
+
+	/* (non-Javadoc)
+	 * @see ar.edu.unju.fi.negocio.servicios.impl.ServicioSeguridad#modificarUsuario(ar.edu.fi.unju.model.domian.Usuario)
+	 */
+	public void modificarUsuario(Usuario usu) throws Exception {
+		usuarioDao.actualizarUsuario(usu);
+	}
+
+	/* (non-Javadoc)
+	 * @see ar.edu.unju.fi.negocio.servicios.impl.ServicioSeguridad#agregarUsuario(ar.edu.fi.unju.model.domian.Usuario)
+	 */
+	public long agregarUsuario(Usuario usu) throws Exception {
+		return usuarioDao.guardarUsuario(usu);
+	}
+
+}

@@ -1,0 +1,18 @@
+33 Rechazos de Tarjetas
+84 Registro de Recuperacion de backup de la tarjeta
+161/-95  Registro Usos de Tarjeta de Operador
+199=-57
+200=-56
+203=-53 Registro de Cambio de Linea
+					152  =  -104
+					161  =  -95
+					175  =  -81
+					199  =  -57
+					200  =  -56
+					203  =  -53
+					206  =  -50
+					211  =  -45
+					213  =  -43
+					220  =  -36
+					241  =  -15
+					246  =  -10

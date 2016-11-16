@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="Grupo-5-Front-End">
+        <wb-resource deploy-path="/" source-path="/src/main/webapp"/>
+        <property name="context-root" value="Grupo-5-Front-End"/>
+        <property name="java-output-path" value="/Grupo-5-Front-End/target/classes"/>
+    </wb-module>
+</project-modules>

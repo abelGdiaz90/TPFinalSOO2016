@@ -1,0 +1,22 @@
+package ar.edu.unju.fi.negocio.servicios.hibernate;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+import ar.edu.unju.fi.negocio.servicios.impl.ServicioSeguridadHibernateImpl;
+
+
+public class Main {
+
+	private ServicioSeguridadHibernateImpl servicio;
+	public static void main(String[] args) throws Exception {
+		
+		private ServicioSeguridadHibernateImpl servicio;
+		
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+		
+		ServicioSeguridadHibernateImpl servicioSeguridad = new ServicioSeguridadHibernateImpl();
+		System.out.println(servicioSeguridad.listaUsuarios().size());
+}
+}

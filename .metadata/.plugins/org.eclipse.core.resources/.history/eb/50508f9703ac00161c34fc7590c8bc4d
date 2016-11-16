@@ -1,0 +1,198 @@
+
+<ui:composition template="/templates/templateIndex.xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	
+	<ui:define name="windowTitle">
+		<p:outputLabel value="#{msg.aplicacion_titulo}"/>
+	</ui:define>
+	
+	<ui:define name="content">
+	<h3 class="first">Default</h3>
+<ul id="mb1">
+    <li> <a data-icon="fa-file-o">File</a>
+        <ul> 
+            <li><a data-icon="fa-plus">New</a>
+                <ul>
+                    <li><a>Project</a></li>
+                    <li><a>Other</a></li>
+                </ul>
+            </li> 
+            <li><a>Open</a></li> 
+            <li><a>Quit</a></li> 
+        </ul>
+    </li>
+    <li> <a data-icon="fa-edit">Edit</a>
+        <ul>
+            <li><a data-icon="fa-mail-forward">Undo</a></li>
+            <li><a data-icon="fa-mail-reply">Redo</a></li>
+        </ul>
+    </li>
+    <li>
+        <a data-icon="fa-question">Help</a>
+        <ul>
+            <li><a>Contents</a></li>
+            <li>
+                <a data-icon="fa-search">Search</a>
+                <ul>
+                    <li><a>Text</a>
+                        <ul>
+                            <li><a>Workspace</a></li>
+                        </ul>
+                    </li>
+                    <li><a>File</a></li>
+                </ul>
+            </li>
+ 
+        </ul>
+ 
+    </li>
+    <li>
+        <a data-icon="fa-gear">Actions</a>
+        <ul>
+            <li><a data-icon="fa-refresh">Edit</a>
+                <ul>
+                    <li><a data-icon="fa-save">Save</a></li>
+                    <li><a data-icon="fa-save">Update</a></li>
+                </ul>
+            </li>
+            <li><a data-icon="fa-phone">Other</a>
+                <ul>
+                    <li><a data-icon="fa-minus">Delete</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a data-icon="fa-close">Quit</a>
+    </li>
+</ul>
+ 
+<br /><br />
+ 
+<h3>Click Trigger</h3>
+<ul id="mb2">
+    <li> <a data-icon="fa-file-o">File</a>
+        <ul> 
+            <li><a data-icon="fa-plus">New</a>
+                <ul>
+                    <li><a>Project</a></li>
+                    <li><a>Other</a></li>
+                </ul>
+            </li> 
+            <li><a>Open</a></li>
+            <li><a>Quit</a></li> 
+        </ul>
+    </li>
+    <li> <a data-icon="fa-edit">Edit</a>
+        <ul>
+            <li><a data-icon="fa-mail-forward">Undo</a></li>
+            <li><a data-icon="fa-mail-reply">Redo</a></li>
+        </ul>
+    </li>
+    <li>
+        <a data-icon="fa-question">Help</a>
+        <ul>
+            <li><a>Contents</a></li>
+            <li>
+                <a data-icon="fa-search">Search</a>
+                <ul>
+                    <li><a>Text</a>
+                        <ul>
+                            <li><a>Workspace</a></li>
+                        </ul>
+                    </li>
+                    <li><a>File</a></li>
+                </ul>
+            </li>
+ 
+        </ul>
+ 
+    </li>
+    <li>
+        <a data-icon="fa-gear">Actions</a>
+        <ul>
+            <li><a data-icon="fa-refresh">Edit</a>
+                <ul>
+                    <li><a data-icon="fa-save">Save</a></li>
+                    <li><a data-icon="fa-save">Update</a></li>
+                </ul>
+            </li>
+            <li><a data-icon="fa-phone">Other</a>
+                <ul>
+                    <li><a data-icon="fa-minus">Delete</a></li>
+                </ul>
+            </li>
+        </ul>
+    </li>
+    <li>
+        <a data-icon="fa-close">Quit</a>
+    </li>
+</ul>   
+ 
+<h3>PrimeElement</h3>
+<p-menubar>
+    <p-submenu value="File" icon="fa-file-o">
+        <p-submenu value="New" icon="fa-plus">
+            <p-menuitem value="Project"></p-menuitem>
+            <p-menuitem value="Other"></p-menuitem>
+        </p-submenu>
+        <p-menuitem value="Open"></p-menuitem>
+        <p-menuitem value="Quit"></p-menuitem>
+    </p-submenu>
+    <p-submenu value="Edit" icon="fa-edit">
+        <p-menuitem value="Undo" icon="fa-mail-forward"></p-menuitem>
+        <p-menuitem value="Redo" icon="fa-mail-reply"></p-menuitem>
+    </p-submenu>
+    <p-submenu value="Help" icon="fa-question">
+        <p-menuitem value="Contents"></p-menuitem>
+        <p-submenu value="Search" icon="fa-search">
+            <p-submenu value="Text">
+                <p-menuitem value="Workspace"></p-menuitem>
+            </p-submenu>
+            <p-menuitem value="File"></p-menuitem>
+        </p-submenu>
+    </p-submenu>
+    <p-submenu value="Action" icon="fa-gear">
+        <p-submenu value="Edit" icon="fa-refresh">
+            <p-menuitem value="Save" icon="fa-save"></p-menuitem>
+            <p-menuitem value="Update" icon="fa-save"></p-menuitem>
+        </p-submenu>
+        <p-submenu value="Other" icon="fa-phone">
+            <p-menuitem value="Delete" icon="fa-minus"></p-menuitem>
+        </p-submenu>
+    </p-submenu>
+    <p-menuitem value="Quit" icon="fa-close"></p-menuitem>
+</p-menubar>
+	
+		<h:form id="formLogin">
+			
+			<div align="center">
+
+				<p:panel id="panel" header="Ingreso al Sistema">
+	  								<p:growl id="growl" showDetail="true" sticky="true" life="800"/>  				
+						<h:panelGrid columns="3">
+							<p:outputLabel for="usuarioId" value="#{msg.column_login_usuario}:"/>
+							<p:inputText id="usuarioId" required="false" value="#{loginBean.nombreUsuario}" label="usuarioId"/>
+							<p:message for="usuarioId" display="icon" />
+			                
+			                <p:outputLabel for="passwordId" value="#{msg.column_login_password}:"/>
+			                <p:password id="passwordId" value="#{loginBean.password}" required="false" label="passwordId"/>
+			                <p:message for="passwordId" display="icon" />		                
+						</h:panelGrid>
+						<p:commandButton value="#{msg.btn_ingresar}" action="#{loginBean.ingresar}"  update="panel"/>
+	
+				</p:panel>
+			</div>
+			
+		
+		</h:form>
+	
+	</ui:define>
+	
+  </ui:composition>

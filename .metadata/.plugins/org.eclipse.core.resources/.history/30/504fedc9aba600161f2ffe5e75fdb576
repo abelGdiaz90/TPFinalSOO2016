@@ -1,0 +1,20 @@
+package BinarioTexto;
+
+
+public class RegistroBinario {
+	
+    public static void main(String[] args) {
+    	
+    	//VentanaGUI ventana=new VentanaGUI();
+    	//ventana.setBounds(0,0,350,200);
+    	//ventana.setVisible(true);
+    	
+         String direccion = "TLL_0318_425_00055_0000004195_00013_20161004_173841_02.41";
+        Fichero fichero = new Fichero();
+        Utilidad util = new Utilidad();
+        fichero.contadorDeRegistro(fichero.generarArray(direccion));
+        fichero.generarFicheroTexto(direccion);
+        
+    }
+}
+    

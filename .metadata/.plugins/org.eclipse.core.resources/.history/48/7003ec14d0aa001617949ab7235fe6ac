@@ -1,0 +1,20 @@
+package ar.edu.unju.fi.negocio.servicios.hibernate;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+
+import ar.edu.unju.fi.model.dao.impl.UsuarioDaoImpl;
+
+
+public class Main {
+
+	public static void main(String[] args) throws Exception {
+		
+		ApplicationContext appContext = new ClassPathXmlApplicationContext("ApplicationContext.xml");
+		
+		VehiculoDaoImpl usuarioDao = (UsuarioDaoImpl) appContext.getBean("usuarioDaoImpl");
+		System.out.println(usuarioDao.listarUsuarios().size());
+	}
+
+}

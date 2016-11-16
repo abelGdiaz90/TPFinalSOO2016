@@ -1,0 +1,23 @@
+package ar.edu.unju.fi.negocio.servicios.hibernate;
+
+import java.util.List;
+
+import ar.edu.fi.unju.model.domian.Usuario;
+
+public interface ServicioSeguridad {
+
+	List<Usuario> listaUsuarios() throws Exception;
+
+	Usuario buscarUsuario(int id) throws Exception;
+
+	void eliminarUsuario(Usuario usu) throws Exception;
+
+	void modificarUsuario(Usuario usu) throws Exception;
+
+	int agregarUsuario(Usuario usu) throws Exception;
+	
+    int  validarUsuario(String usuario, String clave);
+    
+    boolean usuarioDisponible(String usuario)
+
+}
