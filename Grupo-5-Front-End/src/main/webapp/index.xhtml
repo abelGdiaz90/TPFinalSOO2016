@@ -1,0 +1,43 @@
+
+<ui:composition template="/templates/templateIndex.xhtml" 
+	xmlns="http://www.w3.org/1999/xhtml" 
+	xmlns:f="http://java.sun.com/jsf/core" 
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:p="http://primefaces.org/ui" 
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+	
+	<ui:define name="windowTitle">
+		<p:outputLabel value="#{msg.aplicacion_titulo}"/>
+	</ui:define>
+	
+	<ui:define name="content">
+	
+	
+		<h:form id="formLogin">
+			
+			<div align="center">
+
+				<p:panel id="panel" header="Ingreso al Sistema">
+	  								<p:growl id="growl" showDetail="true" sticky="true" life="800"/>  				
+						<h:panelGrid columns="3">
+							<p:outputLabel for="usuarioId" value="#{msg.column_login_usuario}:"/>
+							<p:inputText id="usuarioId" required="false" value="#{loginBean.nombreUsuario}" label="usuarioId"/>
+							<p:message for="usuarioId" display="icon" />
+			                
+			                <p:outputLabel for="passwordId" value="#{msg.column_login_password}:"/>
+			                <p:password id="passwordId" value="#{loginBean.password}" required="false" label="passwordId"/>
+			                <p:message for="passwordId" display="icon" />		                
+						</h:panelGrid>
+						<p:commandButton value="#{msg.btn_ingresar}" action="#{loginBean.ingresar}"  update="panel"/>
+	
+				</p:panel>
+			</div>
+			
+		
+		</h:form>
+	
+	</ui:define>
+	
+  </ui:composition>
