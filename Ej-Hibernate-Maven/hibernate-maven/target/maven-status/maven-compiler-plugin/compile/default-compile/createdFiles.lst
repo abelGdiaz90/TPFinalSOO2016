@@ -1,0 +1,6 @@
+ar\edu\unju\fi\model\dao\UsuarioDao.class
+ar\edu\unju\fi\model\domain\Rol.class
+ar\edu\unju\fi\model\domain\Usuario.class
+ar\edu\unju\fi\model\dao\impl\UsuarioDaoImp.class
+ar\edu\unju\fi\model\hibernate\util\BaseHibernate.class
+ar\edu\unju\fi\App.class

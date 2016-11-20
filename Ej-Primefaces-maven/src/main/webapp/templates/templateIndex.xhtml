@@ -1,0 +1,41 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+
+<h:head>
+	<ui:insert name="windowTitle">
+	   	<p:outputLabel value="#{msg.aplicacion_titulo}"/>
+	</ui:insert>
+	
+</h:head>
+
+<h:body>	
+
+<p:layout fullPage="true">  
+  
+    <p:layoutUnit position="north" size="140" resizable="false" closable="false" collapsible="false" >  
+		<div align="center">
+			<p:outputLabel value="#{msg.aplicacion_titulo}"/>
+		</div>	
+    </p:layoutUnit>  
+  
+    <p:layoutUnit position="center">
+      
+		<ui:insert name="content"> 
+		
+		</ui:insert>
+		
+    </p:layoutUnit>  
+    <p:layoutUnit position="south" size="50" resizable="false" closable="false" collapsible="false">
+    	<div align="center">  
+        	<p:outputLabel value="#{msg.aplicacion_unlp}"/>
+        </div>	  
+    </p:layoutUnit>  
+    
+  
+</p:layout>  
+	
+</h:body>
+</html>

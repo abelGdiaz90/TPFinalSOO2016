@@ -1,0 +1,14 @@
+/* Design by http://www.dreamtemplate.com */
+@charset "utf-8";
+#titulo{
+	text-align: center;
+	text-decoration: underline;
+}
+#principal{
+	width:800px;
+	margin:0px;
+}
+#menu{
+	text-align: right;
+}
+

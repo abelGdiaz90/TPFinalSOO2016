@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+  <class name="ar.edu.unju.fi.model.domain.Rol" table="roles">
+  
+    <id name="rolId" type="int">
+      <column name="rol_id" precision="5" scale="0"/>
+      <generator class="sequence">
+        <param name="sequence">ROLES_SEQ</param>
+      </generator>
+    </id>
+    <property name="descripcion" type="string">
+      <column length="100" name="descripcion" not-null="true"/>
+    </property>
+    <set name="usuarios" table="usuarioS" inverse="true">
+      <key>
+      	<column name = "rol_id" length="10" not-null="true"/>
+      </key>
+      <one-to-many class="ar.edu.unju.fi.model.domain.Usuario"/>
+    </set>
+    
+  </class>
+</hibernate-mapping>
